@@ -1,0 +1,207 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    min-width: 600px;
+}
+.container>header{
+    background-image: url(../img/second.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 70vh;
+    transform: scaleY(1.12);
+    transform-origin: bottom;
+}
+.container>header>h2{
+    color: black;
+    background-color: white;
+    padding: 7px;
+    width: 445px;
+    margin-left: 1vw;
+    transform: translateY(20vh);
+}
+.container>header>p{
+    color: white;
+    background-color: black;
+    padding: 7px;
+    width: 480px;
+    margin-left: 1vw;
+    transform: translateY(20vh);
+}
+#main_menu{
+    background-color: black;
+    height: 60px;
+    margin: auto 1vw;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+#main_menu ul{
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    list-style: none;
+}
+#main_menu ul li{
+    font-size: 0.8em;
+    display: inline-block;
+    line-height: 55px;
+}
+#main_menu ul li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: white;
+    font-weight: normal;
+    padding: 0 2vw;
+}
+#main_menu ul li a:not(#first):after{
+    content: "\f107";
+    font-family: FontAwesome;
+    color: black;
+}
+#main_menu ul li a:not(#first):hover:after{
+    content: "\f107";
+    font-family: FontAwesome;
+    color: white;
+}
+#main_menu h1{
+    font-size: 1.3em;
+    text-align: center;
+    line-height: 1;
+    transform: scale(1.6);
+    transform-origin: top;
+    background-color: rgb(124, 210, 231);
+    padding: 15px 1vw;
+}
+#main_menu span{
+    font-weight: normal;
+    font-size: 0.8em;
+}
+.container>main>section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 7vh;
+    padding-bottom: 7vh;
+}
+.container>main>section>p{
+    margin-bottom: 3vh;
+    font-size: 0.8em;
+}
+.awesome{
+    display: flex;
+    text-align: center;
+}
+.awesome div{
+    margin-left: 2vw;
+    margin-bottom: 2vw;
+}
+.awesome a{
+    display: block;
+    margin: 0 auto;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    border-radius: 50%;
+    background-color: rgb(124, 210, 231);
+}
+.awesome i{
+    font-size: 1.3em;
+}
+.awesome h4{
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+.awesome p{
+    font-size: 0.8em;
+}
+.awesome a i{
+    color: white;
+}
+.container>main>section:nth-child(2){
+    background-color: black;
+    color: white;
+}
+.container>main>section:nth-child(2)>p{
+    text-align: center;
+    margin-top: 2vh;
+    padding-left: 7vw;
+    padding-right: 7vw;
+}
+.container>main>section:nth-child(2)>a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding: 5px 40px;
+    background-color: rgb(124, 210, 231);
+    border-radius: 5px;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+.gallery{
+    display: flex;
+}
+.gallery p{
+    padding: 0 3vw;
+    font-size: 0.8em;
+}
+.gallery img{
+    width: 90%;
+}
+footer>div:first-child{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 7vh 7vw;
+    color: white;
+    background-color: black;
+    text-align: center;
+}
+footer>div:first-child p:nth-of-type(1){
+    font-size: 0.8em;
+    margin-bottom: 5px;
+    margin-top: 3px;
+}
+footer>div:first-child p:nth-of-type(2){
+    color: rgb(102, 100, 100);
+    font-size: 1.5em;
+}
+footer>div:first-child p:nth-of-type(2) span:hover{
+    color: rgb(163, 160, 160);
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(124, 210, 231);
+    color: white;
+    font-size: 0.9em;
+    padding: 3vh 1vw;
+}
+@media screen and (max-width:900px){
+    .awesome{
+        flex-wrap: wrap;
+    }
+    .awesome>div{
+        width: 45vw;
+        margin: auto;
+    }
+    .gallery{
+        flex-wrap: wrap;
+    }
+    .gallery>div{
+        width: 45vw;
+        margin: auto;
+    }
+}
